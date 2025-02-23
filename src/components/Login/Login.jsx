@@ -49,7 +49,7 @@ const Login = () => {
   return (
     <div id="loginPage">
       <header>
-        <h1>Pirana</h1>
+        <h1>Cluster</h1>
         <button>
           <Link to="/register">Register</Link>
         </button>
