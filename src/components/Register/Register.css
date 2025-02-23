@@ -1,0 +1,178 @@
+#registerPage{
+            width: 100%;
+            height: 100vh;
+            /* background-image:url("https://wallpaperaccess.com/full/187161.jpg"); */
+            /* object-fit: contain;
+            background-size: cover; */
+            background-color:#ffffff;
+
+}
+#registerPage header button{
+            padding: .4rem .8rem;
+            border: none;
+            border-radius: .5rem;
+            /* background-color: #161616; */
+            background-color: #fff;
+            box-shadow: 2px 2px 2px grey;
+            letter-spacing: .1rem;
+            
+}
+#registerPage header button a{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        
+}
+/* :root{
+--default-padding:5rem;
+--blue-color:#1776f2;
+--black-color:#000000;
+--grey-color:#65676b;
+--lightGrey-color:#d8dadd;
+--lessWhite-color:#f0f2f5;
+}
+ */
+
+ 
+#registerPage header{
+            width: 100%;
+            height:12vh;
+            /* background-color: #03acfafd; */
+            /* background-color: #03acfafd; */
+            background-color:var(--blue-color);
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            /* text */
+            /* color: #161616; */
+            color: #fff;
+            text-shadow: 2px 2px 2px grey;
+            letter-spacing:.2rem;
+            box-shadow: 4px 4px 4px grey;
+}
+
+
+
+#registerContainer{
+            width: 100%;
+            height: 77vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction: column;
+}
+
+#registerContainer h1{
+            padding: 1rem;
+            color: var(--black-color);
+}
+#registerPage{
+            width: 100%;
+            height: 100vh;
+            /* background-image:url("https://wallpaperaccess.com/full/187161.jpg"); */
+            /* object-fit: contain;
+            background-size: cover; */
+            background-color:#ffffff;
+
+}
+#registerPage header button{
+            padding: .4rem .8rem;
+            border: none;
+            border-radius: .5rem;
+            /* background-color: #161616; */
+            background-color: #fff;
+            box-shadow: 2px 2px 2px grey;
+            letter-spacing: .1rem;
+            
+}
+#registerPage header button a{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        
+}
+/* :root{
+--default-padding:5rem;
+--blue-color:#1776f2;
+--black-color:#000000;
+--grey-color:#65676b;
+--lightGrey-color:#d8dadd;
+--lessWhite-color:#f0f2f5;
+}
+ */
+
+ 
+#registerPage header{
+            width: 100%;
+            height:12vh;
+            /* background-color: #03acfafd; */
+            /* background-color: #03acfafd; */
+            background-color:var(--blue-color);
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            /* text */
+            /* color: #161616; */
+            color: #fff;
+            text-shadow: 2px 2px 2px grey;
+            letter-spacing:.2rem;
+            box-shadow: 4px 4px 4px grey;
+}
+
+
+
+#registerContainer{
+            width: 100%;
+            height: 77vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction: column;
+}
+
+#registerContainer h1{
+            padding: 1rem;
+            color: var(--black-color);
+}
+
+#registerContainer form{
+            background: linear-gradient(135deg, #ff5b209d, #ff9603c4); /* Soft pastel purple and light blue */
+            padding: 2rem;
+            border-radius: 1rem;
+            letter-spacing: .1rem;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+            font-weight: 600;
+            color: #3e2b2b;
+        }
+        
+        #registerContainer form button{
+            color: white;
+            background-color: var(--blue-color); /* Muted teal/blue button */
+            padding: .4rem .8rem;
+            border: 1px solid rgb(2, 0, 0);
+            border-radius: .5rem;
+            box-shadow: 2px 2px 2px grey;
+            letter-spacing: .05rem;
+            width: 100%;
+            max-width: 100px;
+        }
+        
+        #registerContainer form div{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            margin-top: 1rem;
+        }
+        
+        #registerContainer form div input{
+            border-radius: .3rem;
+            height: 2rem;
+            border: none;
+            padding: 0 .5rem;
+            background-color: #f0e6f7; /* Light pastel purple for input fields */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for inputs */
+        }
+        

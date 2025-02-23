@@ -1,0 +1,16 @@
+*{
+margin:0;
+padding:0;
+}
+*,*::before,*::after{
+box-sizing: border-box;
+}
+:root{
+--default-padding:5rem;
+--blue-color:#1776f2;
+--black-color:#000000;
+--grey-color:#65676b;
+--lightGrey-color:#d8dadd;
+--lessWhite-color:#f0f2f5;
+}
+
