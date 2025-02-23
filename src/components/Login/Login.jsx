@@ -20,7 +20,7 @@ const Login = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      let data = await fetch("http://localhost:3300/login", {
+      let data = await fetch("https://clusterapi.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

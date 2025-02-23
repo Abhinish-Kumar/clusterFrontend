@@ -11,7 +11,7 @@ const UserList = () => {
     // Fetch user list after checking if the user is authenticated
     const fetchUserList = async () => {
       try {
-        let response = await fetch("http://localhost:3300/userList", {
+        let response = await fetch("https://clusterapi.onrender.com/userList", {
           method: "GET",
           credentials: "include", // Include cookies in request to authenticate
         });

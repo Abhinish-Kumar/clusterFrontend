@@ -11,8 +11,8 @@ const Notes = () => {
     // Fetch user notes based on the email prop
     const fetchNotes = async () => {
       try {
-        console.log(`http://localhost:3300/userList/${email}`);
-        let response = await fetch(`http://localhost:3300/userList/${email}`, {
+        console.log(`https://clusterapi.onrender.com/${email}`);
+        let response = await fetch(`https://clusterapi.onrender.com/${email}`, {
           method: "GET", // Use GET method to match back-end route
           credentials: "include", // Include cookies for authentication
         });

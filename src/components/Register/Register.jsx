@@ -21,7 +21,7 @@ const Register = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      let data = await fetch("http://localhost:3300/register", {
+      let data = await fetch("https://clusterapi.onrender.com/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

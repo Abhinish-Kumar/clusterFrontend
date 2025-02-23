@@ -9,7 +9,7 @@ const Profile = () => {
   const navigate = useNavigate(); // Create navigate function
 
 async function deleteCookie() {
-            await fetch("http://localhost:3300/deleteCookie", {
+            await fetch("https://clusterapi.onrender.com/deleteCookie", {
               method: "GET",
               credentials: "include",  // Make sure cookies are included in the request
             });
@@ -22,7 +22,7 @@ async function deleteCookie() {
   useEffect(() => {
     const fetchProfileData = async () => {
       try {
-        let response = await fetch("http://localhost:3300/profile", {
+        let response = await fetch("https://clusterapi.onrender.com/profile", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
