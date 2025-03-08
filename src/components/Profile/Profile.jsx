@@ -1,4 +1,4 @@
-import {  useNavigate ,Link} from "react-router-dom"; // Import useNavigate
+import { useNavigate, Link } from "react-router-dom"; // Import useNavigate
 import { useEffect, useState } from "react";
 import "./Profile.css";
 
@@ -8,17 +8,20 @@ const Profile = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate(); // Create navigate function
 
-async function deleteCookie() {
-            await fetch("https://clusterapi.onrender.com/deleteCookie", {
-              method: "GET",
-              credentials: "include",  // Make sure cookies are included in the request
-            });
-            navigate("/login")
-            
-            // After this, you can navigate the user to the login page or show a logout message
-          }
-          
+  // Function to handle logout and delete the cookie
+  async function deleteCookie() {
+    try {
+      await fetch("https://clusterapi.onrender.com/deleteCookie", {
+        method: "GET",
+        credentials: "include", // Ensure cookies are included in the request
+      });
+      navigate("/login"); // Redirect to login after logout
+    } catch (err) {
+      setError("Failed to log out");
+    }
+  }
 
+  // Fetch the profile data
   useEffect(() => {
     const fetchProfileData = async () => {
       try {
@@ -46,6 +49,7 @@ async function deleteCookie() {
     fetchProfileData();
   }, []); // Empty array ensures this runs only once when the component mounts
 
+  // Loading, error, and profile display logic
   if (loading) {
     return <p>Loading...</p>;
   }
@@ -59,23 +63,25 @@ async function deleteCookie() {
       <header>
         <h1>Cluster</h1>
         <div>
-        <button><Link to="/userList">UsersList</Link></button>
-        <button onClick={deleteCookie}>Logout</button> {/* On click, call deleteCookie */}
+          <button>
+            <Link to="/userList">Users List</Link>
+          </button>
+          <button onClick={deleteCookie}>Logout</button> {/* On click, call deleteCookie */}
         </div>
-     
       </header>
+      
       <div id="profileLogo">
-      <h1>Profile</h1>
-      {profileData && (
-        <div>
-          <p>Username: {profileData.name}</p> {/* Changed 'username' to 'name' */}
-          <p>Email: {profileData.email}</p>
-          <img src={profileData.image} alt="Profile" style={{ width: 300 }} />
-        </div>
-      )}
-     
+        <h1>Profile</h1>
+        {profileData ? (
+          <div>
+            <p>Username: {profileData.name}</p> {/* Changed 'username' to 'name' */}
+            <p>Email: {profileData.email}</p>
+            <img src={profileData.image} alt="Profile" style={{ width: 300 }} />
+          </div>
+        ) : (
+          <p>No profile data available.</p> // Display message if no profile data is available
+        )}
       </div>
-     
     </div>
   );
 };
