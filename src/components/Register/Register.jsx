@@ -51,7 +51,7 @@ const Register = () => {
   return (
     <div id="registerPage">
     <header>
-      <h1>Cluster</h1>
+      <h1>Pirana</h1>
 <button> <Link to="/login">Login</Link></button>
     </header>
      <div id="registerContainer">

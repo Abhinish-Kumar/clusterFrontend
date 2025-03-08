@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 import "./Notes.css";
 
 const Notes = () => {
@@ -57,6 +57,25 @@ const Notes = () => {
     }
   };
 
+  // Function to handle the deletion of a note
+  const handleDeleteNote = async (noteId) => {
+    try {
+      let response = await fetch(`https://clusterapi.onrender.com/${email}/${noteId}`, {
+        method: "DELETE", // Use DELETE method to remove the note
+        credentials: "include", // Include cookies for authentication
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to delete note");
+      }
+
+      const data = await response.json(); // Updated notes after deletion
+      setNotes(data); // Update the notes state to reflect the deletion
+    } catch (err) {
+      setError(err.message); // Handle any errors during the request
+    }
+  };
+
   return (
     <div id="notes">
       <header>
@@ -71,7 +90,10 @@ const Notes = () => {
         {notes.length > 0 ? (
           <ul>
             {notes.map((note, index) => (
-              <li key={index}>{note[Object.keys(note)[0]]}</li>
+              <li key={index}>
+                {note[Object.keys(note)[0]]}{" "}
+                <button onClick={() => handleDeleteNote(index)}>Delete</button>
+              </li>
             ))}
           </ul>
         ) : (
